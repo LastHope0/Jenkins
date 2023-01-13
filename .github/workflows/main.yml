@@ -1,0 +1,40 @@
+#---------------------------------------------------------
+# GitHub Action - Basic
+# 
+# Copyleft (c) by https://github.com/LastHope0
+#---------------------------------------------------------
+
+name: GitAction
+
+env:
+  APPLICATION_NAME  : "HELLO"
+  ACTOR             : "${{github.GITHUB_ACTOR}}"
+  ACTOR_ID          : "${{github.GITHUB_ACTOR_ID}}"
+  RUNNER_TEMP       : "${{github.RUNNER_TEMP}}"
+
+on: 
+  push:
+    branches: 
+      - main
+      
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+  
+    steps:
+      - name: Print system info
+        run: 
+          echo "Hello!"
+          echo "Application name:${{env.APPLICATION_NAME}}"
+          echo "Actor:${{env.ACTOR}}"
+          echo "Actor id:${{env.ACTOR_ID}}"
+          echo "Runner temp:${{env.RUNNER_TEMP}}"
+      
+  building:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Print directory
+        run: ll -al
+      
+  
