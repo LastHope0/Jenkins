@@ -25,11 +25,11 @@ jobs:
     steps:
       - name: Print system info
         run: 
-          echo "Hello!\n"
-          echo "Application name:${{env.APPLICATION_NAME}}\n"
-          echo "Actor:${{env.ACTOR}}\n"
-          echo "Actor id:${{env.ACTOR_ID}}\n"
-          echo "Runner temp:${{env.RUNNER_TEMP}}\n"
+          echo "Hello"
+          echo "Application name: ${{env.APPLICATION_NAME}}"
+          echo "Actor: ${{env.ACTOR}}"
+          echo "Actor id: ${{env.ACTOR_ID}}"
+          echo "Runner temp: ${{env.RUNNER_TEMP}}"
       
       
   building:
@@ -45,7 +45,7 @@ jobs:
           
       - name: Test GO version
         run: 
-          go verion
+          go version
           
       - name: Compiling code
         run:
