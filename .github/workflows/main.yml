@@ -24,17 +24,17 @@ jobs:
     steps:
       - name: Print system info
         run: 
-          echo "Hello!"
-          echo "Application name:${{env.APPLICATION_NAME}}"
-          echo "Actor:${{env.ACTOR}}"
-          echo "Actor id:${{env.ACTOR_ID}}"
-          echo "Runner temp:${{env.RUNNER_TEMP}}"
+          echo "Hello!\n"
+          echo "Application name:${{env.APPLICATION_NAME}}\n"
+          echo "Actor:${{env.ACTOR}}\n"
+          echo "Actor id:${{env.ACTOR_ID}}\n"
+          echo "Runner temp:${{env.RUNNER_TEMP}}\n"
       
   building:
     runs-on: ubuntu-latest
     
     steps:
       - name: Print directory
-        run: ll -al
+        run: ls -al
       
   
