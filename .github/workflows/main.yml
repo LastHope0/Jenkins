@@ -24,12 +24,12 @@ jobs:
   
     steps:
       - name: Print system info
-        run: 
-          echo -e "Hello\n"
-          echo -e "Application name:${{env.APPLICATION_NAME}}\n"
-          echo -e "Actor:${{env.ACTOR}}\n"
-          echo -e "Actor id:${{env.ACTOR_ID}}\n"
-          echo -e "Runner temp:${{env.RUNNER_TEMP}}\n"
+        run: |
+          echo "Hello"
+          echo "Application name:${{env.APPLICATION_NAME}}"
+          echo "Actor:${{env.ACTOR}}"
+          echo "Actor id:${{env.ACTOR_ID}}"
+          echo "Runner temp:${{env.RUNNER_TEMP}}"
       
       
   building:
